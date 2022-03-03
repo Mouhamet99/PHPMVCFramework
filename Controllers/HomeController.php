@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\core\Application;
+use App\core\Request;
 
 class HomeController extends Controller
 {
@@ -20,8 +21,10 @@ class HomeController extends Controller
         return $this->render('contact');
     }
 
-    public function handleContact(): string
+    public function handleContact(Request $request): string
     {
+        $body = $request->getBody();
+        var_dump($body);
         return "Handle submitting data";
     }
 

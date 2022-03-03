@@ -37,20 +37,18 @@ class Router
         if (is_string($callback)) {
             return $this->RenderView($callback);
         }
-//
-//        if (is_array($callback)) {
-//            return call_user_func_array($callback);
-//        }
+
         if (is_array($callback)) {
             $callback[0] = new $callback[0]();
         }
-        return call_user_func($callback);
+        return call_user_func($callback, $this->request);
     }
 
     public function RenderView($view, $params)
     {
         $layoutContent = $this->layoutContent();
         $viewContent = $this->RenderOnlyView($view, $params);
+
         return str_replace('{{content}}', $viewContent, $layoutContent);
     }
 
