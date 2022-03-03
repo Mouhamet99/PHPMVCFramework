@@ -21,9 +21,16 @@ class Router{
         $method = $this->request->getMethod();
         $callback = $this->routes[$method][$path] ?? false;
         if($callback === false){
-              echo "Not Found Function";
-              exit;
+        return $this->RenderView('home');
         }
-        echo call_user_func($callback);
+
+        return $this->RenderView($callback);
+
+        return call_user_func($callback);
+    }
+
+    public function RenderView($view)
+    {
+        include_once __DIR__."/../Views/$view.php";
     }
 }
