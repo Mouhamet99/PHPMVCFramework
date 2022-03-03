@@ -1,0 +1,18 @@
+{
+    "name": "simplon/phpmvc-framework",
+    "description": "A Basic Project to learn how to create php mvc framework from scratch",
+    "authors": [
+        {
+            "name": "Mouhamet99",
+            "email": "dieyemouhamet1@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "/"
+        }
+    },
+    "require": {
+
+    }
+}
