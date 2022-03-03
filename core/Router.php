@@ -31,6 +31,24 @@ class Router{
 
     public function RenderView($view)
     {
-        include_once __DIR__."/../Views/$view.php";
+        $layoutContent = $this->layoutContent();
+        $viewContent = $this->RenderOnlyView($view);
+        return str_replace('{{content}}', $viewContent, $layoutContent);
     }
+
+    public function layoutContent()
+    {
+        ob_start();
+        include_once Application::$ROOT_DIR."/Views/layouts/main.php";
+        return ob_get_clean() ;
+    }
+
+     public function RenderOnlyView($view)
+    {
+        ob_start();
+        include_once Application::$ROOT_DIR."/Views/$view.php";
+        return ob_get_clean() ;
+
+    }
+
 }
