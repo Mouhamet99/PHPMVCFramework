@@ -11,6 +11,7 @@ class AuthController extends Controller
         if ($request->isPost()) {
             return 'Login data';
         }
+        $this->setLayout('auth');
         return $this->render('login');
     }
 
@@ -18,8 +19,8 @@ class AuthController extends Controller
     {
         if ($request->isPost()) {
             return 'Registration Success';
-
         }
+        $this->setLayout('auth');
         return $this->render('register');
     }
 }
