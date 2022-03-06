@@ -2,6 +2,8 @@
 
 namespace App\core;
 
+use App\Controllers\Controller;
+
 class Router
 {
     protected array $routes = [];
@@ -34,6 +36,7 @@ class Router
             $this->response->setStatusCode(404);
             return 'Not Found';
         }
+
         if (is_string($callback)) {
             return $this->RenderView($callback);
         }
