@@ -1,11 +1,11 @@
-  <div class="container col-6">
+  <div class="container col-6 mt-5">
       <div class="form-body">
         <div class="row">
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Registration</h3>
-                        <p>Fill in the data below.</p>
+                        <h3 class="text-center">Registration</h3>
+                        <p class="text-center">Fill in the data below.</p>
                         <form class="requires-validation" novalidate action="" method="post">
 
                             <div class="col-md-12 my-4">
