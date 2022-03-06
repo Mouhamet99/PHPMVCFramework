@@ -21,8 +21,8 @@
                             </div>
 
                            <div class="col-md-12 my-4">
-                                <select class="form-select mt-3" name="Profession" required>
-                                      <option selected disabled value="">Profession</option>
+                                <select class="form-select mt-3" name="profession" required>
+                                      <option selected value="">Profession</option>
                                       <option value="jweb">Junior Web Developer</option>
                                       <option value="sweb">Senior Web Developer</option>
                                       <option value="pmanager">Project Manager</option>
@@ -47,10 +47,10 @@
                            <div class="col-md-12 mt-3 my-4">
                             <label class="mb-3 mr-1" for="gender">Gender: </label>
 
-                            <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off" required>
+                            <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off" checked>
                             <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
 
-                            <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off" required>
+                            <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off">
                             <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
 
                                <div class="valid-feedback mv-up">You selected a gender!</div>

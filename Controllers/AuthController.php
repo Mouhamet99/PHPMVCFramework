@@ -18,13 +18,13 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+        $registerModel = new RegisterModel();
         if ($request->isPost()) {
-            $registerModel = new RegisterModel();
             $registerModel->loadData($request->getBody());
-
             if ($registerModel->validate() && $registerModel->register()) {
                 return 'Registration Success';
             }
+            return json_encode($registerModel);
             return $this->render('register', [
                 'model' => $registerModel
             ]);
